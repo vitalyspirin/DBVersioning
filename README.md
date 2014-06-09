@@ -2,6 +2,7 @@ DBVersioning
 ============
 
 DDL and DML updates are done through stored procedure which also adds a record into 'version' table with description, date, SQL string and developer's name.
+Update will be applied only if it doesn't have corresponding record in 'version' table (i.e. it hasn't been applied before).
 In this case it's easy to apply changes to different staging servers without manual tracking of which changes were already applied to which server.
 
 Each update will have a section in stored procedure similar to this:
