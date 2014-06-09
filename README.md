@@ -14,9 +14,9 @@ Each update will have a section in stored procedure similar to this:
 
 	SET @sqlStr1 = "
 		CREATE TABLE test1
-    (
-      test1_id INTEGER AUTO_INCREMENT PRIMARY KEY
-    );
+		(
+			test1_id INTEGER AUTO_INCREMENT PRIMARY KEY
+		);
 	";
 
 	SET @result = (SELECT version_id FROM version WHERE version_id = @version_id);
@@ -39,6 +39,5 @@ Each update will have a section in stored procedure similar to this:
 # ---------------------------------------------------------------------------
 ```
 
-If you realize that you want to modify update that was already applied then instead of changing existing section in stored procedure you need to add a new one with 
+If you realized that you want to modify update that had been already applied then instead of changing existing section in stored procedure you need to add a new one with 
 further change!
-
