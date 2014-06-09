@@ -23,23 +23,23 @@ BEGIN
 
 	# ---------------------------------------------------------------------------
 
-	SET @version_id = "2014-06-04 11:00:00";
-	SET @version_comment = "Creating tables 'test1' and 'test1'";
+	SET @version_id = '2014-06-04 11:00:00';
+	SET @version_comment = 'Creating tables "test1" and "test1"';
 	SET @version_developer = 'Vitaly Spirin';
 
-	SET @sqlStr1 = "
+	SET @sqlStr1 = '
 		CREATE TABLE test1
     (
       test1_id INTEGER AUTO_INCREMENT PRIMARY KEY
     );
-	";
+	';
 
-	SET @sqlStr2 = "
+	SET @sqlStr2 = '
 		CREATE TABLE test2
     (
       test2_id INTEGER AUTO_INCREMENT PRIMARY KEY
     );
-	";
+	';
 
 	SET @result = (SELECT version_id FROM version WHERE version_id = @version_id);
 

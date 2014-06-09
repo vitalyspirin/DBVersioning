@@ -8,16 +8,16 @@ Each update will have a section in stored procedure similar to this:
 
 ```SQL
 # ---------------------------------------------------------------------------
-	SET @version_id = "2014-06-04 11:00:00";
-	SET @version_comment = "Creating tables 'test1' and 'test1'";
+	SET @version_id = '2014-06-04 11:00:00';
+	SET @version_comment = 'Creating table "test1"';
 	SET @version_developer = 'Vitaly Spirin';
 
-	SET @sqlStr1 = "
+	SET @sqlStr1 = '
 		CREATE TABLE test1
 		(
 			test1_id INTEGER AUTO_INCREMENT PRIMARY KEY
 		);
-	";
+	';
 
 	SET @result = (SELECT version_id FROM version WHERE version_id = @version_id);
 
@@ -41,3 +41,7 @@ Each update will have a section in stored procedure similar to this:
 
 If you realized that you want to modify update that had been already applied then instead of changing existing section in stored procedure you need to add a new one with 
 further change!
+
+After stored procedure was run list of applied updates (if any) will be shown:
+
+	Updated to version = 2014-06-04 11:00:00 (Creating table "test1"). Author: Vitaly Spirin
