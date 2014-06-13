@@ -46,3 +46,7 @@ further change!
 After stored procedure was run list of applied updates (if any) will be shown:
 
 	Updated to version = 2014-06-04 11:00:00 (Creating table "test1"). Author: Vitaly Spirin
+
+'version' table will have corresponding data:
+
+![screenshot1.png](/docs/screenshot1.png "'version' table screenshot")
