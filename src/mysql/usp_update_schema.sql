@@ -24,7 +24,7 @@ BEGIN
 	# ---------------------------------------------------------------------------
 
 	SET @version_id = '2014-06-04 11:00:00';
-	SET @version_comment = 'Creating tables "test1" and "test1"';
+	SET @version_comment = 'Creating tables "test1" and "test2"';
 	SET @version_developer = 'Vitaly Spirin';
 
 	SET @sqlStr1 = '
