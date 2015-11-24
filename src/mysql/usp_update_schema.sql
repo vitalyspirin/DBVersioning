@@ -29,16 +29,16 @@ BEGIN
 
 	SET @sqlStr1 = '
 		CREATE TABLE test1
-    (
-      test1_id INTEGER AUTO_INCREMENT PRIMARY KEY
-    );
+		(
+			test1_id INTEGER AUTO_INCREMENT PRIMARY KEY
+		);
 	';
 
 	SET @sqlStr2 = '
 		CREATE TABLE test2
-    (
-      test2_id INTEGER AUTO_INCREMENT PRIMARY KEY
-    );
+		(
+			test2_id INTEGER AUTO_INCREMENT PRIMARY KEY
+    		);
 	';
 
 	SET @result = (SELECT version_id FROM version WHERE version_id = @version_id);
@@ -49,7 +49,7 @@ BEGIN
 		PREPARE stmt1 FROM @sqlStr1;
 		EXECUTE stmt1;
 
-    PREPARE stmt2 FROM @sqlStr2;
+		PREPARE stmt2 FROM @sqlStr2;
 		EXECUTE stmt2;
     
 		SET @sqlStr = CONCAT(@sqlStr1, @sqlStr2);
